@@ -1,21 +1,29 @@
 <script>
+import AppMain from "./components/AppMain.vue";
+
+
 export default {
   data() {
     return {
 
     }
   },
+
+  components: {
+    AppMain,
+  },
+
 }
 </script>
 
 
 <template>
-  <div>
-    
-  </div>
+
+  <AppMain></AppMain>
+
 </template>
 
 
-<style lang="scss">
-  
+<style lang="scss" scoped>
+
 </style>
