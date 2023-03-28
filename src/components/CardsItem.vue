@@ -22,16 +22,23 @@ export default {
                 <img :src="img.image_url" alt="">
             </div>
     
+
             <div>
                 <strong>Nome Carta: </strong> 
-                <span>{{card.name}}</span>
             </div>
             <div>
+                <span>{{card.name}}</span>
+            </div>
+
+            <div>
                 <strong>Tipo Carta: </strong>
+            </div>
+            <div>
                 <span>{{card.type}}</span>
             </div>
 
-            <div v-for="price in card.card_prices">
+
+            <div v-for="price in card.card_prices" class="price">
                 <strong>Prezzo Amazon: </strong>
                 <span>{{price.amazon_price}} $</span>
             </div>
@@ -51,15 +58,15 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: calc(100% / 5 - 30px);
         gap: 6px;
+        width: calc(100% / 5 - 30px);
         padding-bottom: 15px;
         background-color: #51556c3f;
 
+        border-radius: 5px;
         border-left: 2px solid white;
         border-right: 2px solid white;
         border-bottom: 2px solid white;
-        border-radius: 5px;
         box-shadow: 2px 3px 8px white;
 
         img {
@@ -79,9 +86,8 @@ export default {
             box-shadow: 2px 1px 2px rgba(0, 235, 235, 0.521);
         }
 
-        hr {
-            margin-top: 15px;
-            width: 100%;
+        .price {
+            padding-top: 15px;
         }
     }
 
