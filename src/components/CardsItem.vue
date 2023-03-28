@@ -15,44 +15,38 @@ export default {
 
 <template>
 
-
-        <div class="card">
-            
-            <div v-for="img in card.card_images">
-                <img :src="img.image_url" alt="">
-            </div>
-    
-
-            <div>
-                <strong>Nome Carta: </strong> 
-            </div>
-            <div>
-                <span>{{card.name}}</span>
-            </div>
-
-            <div>
-                <strong>Tipo Carta: </strong>
-            </div>
-            <div>
-                <span>{{card.type}}</span>
-            </div>
-
-
-            <div v-for="price in card.card_prices" class="price">
-                <strong>Prezzo Amazon: </strong>
-                <span>{{price.amazon_price}} $</span>
-            </div>
-
-
+    <div class="card">
+        <div v-for="img in card.card_images">
+            <img :src="img.image_url" alt="">
         </div>
+
+
+        <div>
+            <strong>Nome Carta: </strong> 
+        </div>
+        <div>
+            <span>{{card.name}}</span>
+        </div>
+
+        <div>
+            <strong>Tipo Carta: </strong>
+        </div>
+        <div>
+            <span>{{card.type}}</span>
+        </div>
+
+
+        <div v-for="price in card.card_prices" class="price">
+            <strong>Prezzo Amazon: </strong>
+            <span>{{price.amazon_price}} $</span>
+        </div>
+    </div>
 
 </template>
 
 
 <style lang="scss" scoped>
     
-
-
     .card {
         display: flex;
         flex-direction: column;
