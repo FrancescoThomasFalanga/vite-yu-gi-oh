@@ -32,7 +32,7 @@ export default {
 
 <template>
 
-    <div class="cards-list">
+    <div v-if="store.cards.length === 50" class="cards-list">
 
         <CardsItem v-for="card in store.cards" :card="card"></CardsItem>
         
@@ -48,5 +48,9 @@ export default {
     align-items: center;
     gap: 30px;
     margin: 30px;
+}
+
+.none {
+    display: none;
 }
 </style>
