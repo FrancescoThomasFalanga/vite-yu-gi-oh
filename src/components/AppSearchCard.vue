@@ -15,9 +15,16 @@ export default {
 
     <div class="container">
         <div class="search">
+
+            <div>
+                <input type="text" placeholder="Cerca per archetipo" @keyup.enter="$emit('searchArchetype')" v-model="store.archetypeName">
+                <button @click="$emit('searchArchetype')">Cerca</button>
+            </div>
     
-            <input type="text" placeholder="Cerca per archetipo" @keyup.enter="$emit('searchArchetype')" v-model="store.archetypeName">
-            <button @click="$emit('searchArchetype')">Cerca</button>
+
+            <div>
+                <strong>Yu-Gi-Oh! API</strong>
+            </div>
     
         </div>
     </div>
@@ -32,8 +39,11 @@ export default {
         margin: 30px auto;
 
         .search {
-            padding: 40px 20px;
-            background-color: rgba(0, 0, 255, 0.178);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+            background-color: #000f66a2;
             border-radius: 20px;
 
             input {
@@ -47,6 +57,10 @@ export default {
                 padding: 8px;
                 background-color: rgba(0, 0, 255, 0.733);
 
+            }
+
+            strong {
+                font-size: 32px;
             }
         }
     }
