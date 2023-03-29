@@ -21,7 +21,7 @@ export default {
 
 <template>
 
-  <AppLoader v-if="store.cards.length < 100"></AppLoader>
+  <AppLoader v-if="!store.cards.length > 0"></AppLoader>
 
   <AppMain></AppMain>
 

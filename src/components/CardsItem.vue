@@ -54,6 +54,7 @@ export default {
         gap: 6px;
         width: calc(100% / 5 - 30px);
         padding-bottom: 15px;
+        margin: 15px;
         background-color: #000f66a2;
         border-radius: 5px;
         border-left: 2px solid white;

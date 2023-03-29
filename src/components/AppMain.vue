@@ -3,6 +3,7 @@ import {store} from "../store.js"
 import axios from "axios";
 import CardsItem from "./CardsItem.vue";
 import AppSearchCard from "./AppSearchCard.vue";
+import ShowResultsItem from "./ShowResultsItem.vue";
 
 export default {
     data() {
@@ -14,6 +15,7 @@ export default {
     components: {
         CardsItem,
         AppSearchCard,
+        ShowResultsItem,
     },
 
     created() {
@@ -55,7 +57,9 @@ export default {
 
     <AppSearchCard @searchArchetype="search()"></AppSearchCard>
 
+    <ShowResultsItem class="flex"></ShowResultsItem>
     <div class="cards-list">
+
 
         <CardsItem v-for="card in store.cards" :card="card"></CardsItem>
 
@@ -63,17 +67,25 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+    .flex {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
     .cards-list {
         display: flex;
         flex-flow: row wrap;
-        justify-content: center;
         align-items: center;
-        gap: 30px;
         max-width: 1200px;
-        margin: 30px auto;
+        margin: 0 auto 30px;
         background-color: rgba(0, 0, 255, 0.178);
         padding: 20px;
-        border-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 
 </style>
