@@ -45,8 +45,11 @@ export default {
 
                 this.store.cards = res.data.data;
 
-            });
-
+            }).catch(function (error) {
+                if (error.response) {
+                    alert("Stai Inserendo un Valore che non esiste");
+                };
+            })
         }
     },
 
