@@ -14,7 +14,6 @@ export default {
 
 
 <template>
-
     <div class="card">
         <div v-for="img in card.card_images">
             <img :src="img.image_url" alt="">
@@ -36,18 +35,18 @@ export default {
         </div>
 
 
-        <div v-for="price in card.card_prices" class="price">
-            <strong>Prezzo Amazon: </strong>
-            <span>{{price.amazon_price}} $</span>
+        <div class="price">
+            <strong>Archetipo: </strong>
+            <span>{{card.archetype}}</span>
         </div>
     </div>
-
 </template>
 
 
 <style lang="scss" scoped>
     
     .card {
+        text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -55,8 +54,7 @@ export default {
         gap: 6px;
         width: calc(100% / 5 - 30px);
         padding-bottom: 15px;
-        background-color: #51556c3f;
-
+        background-color: #000f66a2;
         border-radius: 5px;
         border-left: 2px solid white;
         border-right: 2px solid white;
@@ -74,6 +72,7 @@ export default {
         }
 
         span {
+            font-size: 14px;
             background-color: rgba(0, 0, 0, 0.377);
             border-radius: 10px;
             padding: 2px 4px;
@@ -84,7 +83,5 @@ export default {
             padding-top: 15px;
         }
     }
-
-
 
 </style>
