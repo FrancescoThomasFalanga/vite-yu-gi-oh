@@ -15,30 +15,17 @@ export default {
 
 <template>
     <div class="card">
-        <div v-for="img in card.card_images">
-            <img :src="img.image_url" alt="">
-        </div>
+            <img v-for="img in card.card_images" :src="img.image_url" alt="">
 
-
-        <div>
             <strong>Nome Carta: </strong> 
-        </div>
-        <div>
             <span>{{card.name}}</span>
-        </div>
 
-        <div>
             <strong>Tipo Carta: </strong>
-        </div>
-        <div>
             <span>{{card.type}}</span>
-        </div>
 
-
-        <div class="price">
             <strong>Archetipo: </strong>
-            <span>{{card.archetype}}</span>
-        </div>
+            <span v-if="card.archetype">{{card.archetype}}</span>
+            <span v-else>Unknown</span>
     </div>
 </template>
 
@@ -78,10 +65,6 @@ export default {
             border-radius: 10px;
             padding: 2px 4px;
             box-shadow: 2px 1px 2px rgba(0, 235, 235, 0.521);
-        }
-
-        .price {
-            padding-top: 15px;
         }
     }
 
